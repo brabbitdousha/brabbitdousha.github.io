@@ -19,37 +19,6 @@
       );
     }
 	</script>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <style>
-     .video-container {
-       position: relative;
-       width: 100%;
-       max-width: 800px;
-       margin: 0 auto;
-     }
-     #main-video {
-       width: 100%;
-       height: auto;
-     }
-     .controls {
-       position: absolute;
-       bottom: 15px;
-       left: 15px;
-       display: flex;
-       gap: 10px;
-     }
-     .controls button {
-       background-color: rgba(0, 0, 0, 0.5);
-       color: white;
-       border: none;
-       padding: 10px;
-       cursor: pointer;
-     }
-     .controls button:hover {
-       background-color: rgba(0, 0, 0, 0.8);
-     }
-   </style>
 
   <title>MIRReS: Multi-bounce Inverse Rendering using Reservoir Sampling</title>
 
@@ -226,59 +195,18 @@
         </p>
 
         <center>
-          <div class="video-container" align="center">
-            <video id="main-video" 
-              src='files/video/3.mp4' 
-              poster="files/images/m_load.png" 
-              loop 
-              playsinline>
-            </video> 
-            <div class="controls">
-              <button id="play-pause-btn">Play</button>
-              <button id="fullscreen-btn">Fullscreen</button>
-            </div>
+          <iframe src="https://drive.google.com/file/d/1dSNm5sL1FndUWQfJQCJYmAI0NSXomfxL/preview" width="640" height="340" frameborder="0" allowfullscreen></iframe>
+
+          <br>
+          <div class="container is-max-desktop has-text-centered">
+          <h2 class="title">Overview</h2>
+          <div align="center">
+            <img src="files/images/p_3.png" alt="Image" style="width: 100%;"/>
           </div>
-        
-          <script>
-            const video = document.getElementById('main-video');
-            const playPauseBtn = document.getElementById('play-pause-btn');
-            const fullscreenBtn = document.getElementById('fullscreen-btn');
-        
-            // Ensure video is paused initially
-            video.pause();
-        
-            // Play/Pause button functionality
-            playPauseBtn.addEventListener('click', () => {
-              if (video.paused) {
-                video.play();
-                playPauseBtn.textContent = 'Pause';
-              } else {
-                video.pause();
-                playPauseBtn.textContent = 'Play';
-              }
-            });
-        
-            // Fullscreen button functionality
-            fullscreenBtn.addEventListener('click', () => {
-              if (video.requestFullscreen) {
-                video.requestFullscreen();
-              } else if (video.webkitRequestFullscreen) { // Safari
-                video.webkitRequestFullscreen();
-              } else if (video.msRequestFullscreen) { // IE/Edge
-                video.msRequestFullscreen();
-              }
-            });
-        
-            // Update play/pause button text based on video state
-            video.addEventListener('play', () => {
-              playPauseBtn.textContent = 'Pause';
-            });
-        
-            video.addEventListener('pause', () => {
-              playPauseBtn.textContent = 'Play';
-            });
-          </script>
+          </div>
+
         </center>
+        
         <br>
       </div>
     </div>
