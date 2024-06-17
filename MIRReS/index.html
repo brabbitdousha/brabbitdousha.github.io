@@ -148,10 +148,8 @@
         </span>
       </div>
     </div>
-
-
     <br>
-    <br>
+
     <div class="row">
       <div class="col-md-11 col-md-offset-1 ">
 
@@ -213,16 +211,15 @@
       </div>
     </div>
     <br>
-    <br>
     <div class="row">
       <div class="col-md-11 col-md-offset-1 ">
         <h3>
-          <b>Pipeline and results on TensoIR-Synthetic Dataset</b>
+          <b>Pipeline</b>
         </h3>
         <hr>
         <p>
           <font size="3" color="gray">
-            More results can be found in our paper.
+            This video will explain our motivation and each stage of the pipeline, and showcase our results.
             <!-- <br />
             * The G.T. roughness is N/A. because not all synthetic data are rendered with Disney BSDF. -->
           </font>
@@ -282,6 +279,63 @@
             });
           </script>
         </center>
+        <br>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-md-11 col-md-offset-1 ">
+        <h3>
+          <b>Results on TensoIR-Synthetic Dataset</b>
+        </h3>
+        <hr>
+        <p>
+          <font size="3" color="gray">
+            <!-- <br />
+            * The G.T. roughness is N/A. because not all synthetic data are rendered with Disney BSDF. -->
+          </font>
+        </p>
+        <div class="container is-max-desktop has-text-centered">
+          <h2 class="title">Relighting results</h2>
+          <div align="center">
+            <video id="scene_editing_1" 
+              width="100%" height="100%" 
+              src='files/video/only_result.mp4' 
+              poster="files/loading.gif" 
+              muted="" autoplay="" loop="" playsinline="" >
+            </video>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="container is-max-desktop has-text-centered">
+          <h2 class="title">Scene editing and material editing</h2>
+          <div align="center">
+            <video id="scene_editing_1" 
+              width="40%" height="40%" 
+              src='files/video/with_tex_box.mp4' 
+              poster="files/loading.gif" 
+              muted="" autoplay="" loop="" playsinline="" >
+            </video>
+            <video id="scene_editing_2" 
+              width="40%" height="40%" 
+              src='files/video/diff_cornell.mp4' 
+              poster="files/loading.gif" 
+              muted="" autoplay="" loop="" playsinline="" >
+            </video>
+          </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="container is-max-desktop has-text-centered">
+          <h2 class="title">ReSTIR result under 1 spp and indirect shading effects</h2>
+          <div align="center">
+            <img src="files/images/abl/indirect.png" alt="Image" style="width: 80%;"/>
+          </div>
+        </div>
       </div>
     </div>
     
