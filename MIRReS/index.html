@@ -136,7 +136,7 @@
         <!-- bigger text size -->
         <div class="text-justify" style="font-size: 1.2em;">
     
-          We present MIRReS, a novel two-stage inverse rendering framework that jointly reconstructs and optimizes the explicit geometry, material, and lighting from multi-view images. Unlike previous methods that rely on implicit irradiance fields or simplified path tracing algorithms, our method extracts an explicit geometry (triangular mesh) in stage one, and introduces a more realistic physically-based inverse rendering model that utilizes multi-bounce path tracing and Monte Carlo integration. By leveraging multi-bounce path tracing, our method effectively estimates indirect illumination, including self-shadowing and internal reflections, which improves the intrinsic decomposition of shape, material, and lighting. Moreover, we incorporate reservoir sampling into our framework to address the noise in Monte Carlo integration, enhancing convergence and facilitating gradientbased optimization with low sample counts. Through qualitative and quantitative evaluation of several scenarios, especially in challenging scenarios with complex shadows, we demonstrate that our method achieves state-of-the-art performance on decomposition results. Additionally, our optimized explicit geometry enables applications such as scene editing, relighting, and material editing with modern graphics engines or CAD software.
+          We present MIRReS, a novel two-stage inverse rendering framework that jointly reconstructs and optimizes explicit geometry, materials, and lighting from multi-view images. Unlike previous methods that rely on implicit irradiance fields or oversimplified path tracing algorithms, our method first extracts an explicit triangular mesh in the initial stage. Subsequently, it employs a more realistic physically-based inverse rendering model in the second stage, utilizing multi-bounce path tracing and Monte Carlo integration. By leveraging multi-bounce path tracing, our method not only effectively estimates indirect illumination--including self-shadowing and internal reflections--but also enhances the intrinsic decomposition of shape, material, and lighting. Moreover, we incorporate reservoir sampling into our framework to address the noise in Monte Carlo integration, enhancing convergence and facilitating gradient-based optimization with low sample counts. Through both qualitative and quantitative assessments across various scenarios, especially those with complex shadows, we demonstrate that our method achieves state-of-the-art performance in decomposition results. Additionally, our optimized explicit geometry supports further applications in scene editing, relighting, and material editing, compatible with modern graphics engines and CAD software.
         </div>
         <div class="container is-max-desktop has-text-centered">
           <h2 class="title">Albedo results and relighting results</h2>
@@ -246,7 +246,7 @@
         <br>
         <br>
         <div class="container is-max-desktop has-text-centered">
-          <h2 class="title">Albedo compare</h2>
+          <h2 class="title">Albedo comparison</h2>
           <div align="center">
             <img src="files/images/abl/albedo.png" alt="Image" style="width: 90%;"/>
           </div>
@@ -254,7 +254,7 @@
         <br>
         <br>
         <div class="container is-max-desktop has-text-centered">
-          <h2 class="title">Normal compare</h2>
+          <h2 class="title">Normal comparison</h2>
           <div align="center">
             <img src="files/images/abl/normal.png" alt="Image" style="width: 90%;"/>
           </div>
