@@ -112,7 +112,7 @@
                 </path>
               </svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
             </span>
-            <span style="font-size: 14px;">Code: available now</span>
+            <span style="font-size: 14px;">Code</span>
           </a>
         </span>
         <span class="link-block">
@@ -152,6 +152,21 @@
     
           We present MIRReS, a novel two-stage inverse rendering framework that jointly reconstructs and optimizes explicit geometry, materials, and lighting from multi-view images. Unlike previous methods that rely on implicit irradiance fields or oversimplified path tracing algorithms, our method first extracts an explicit triangular mesh in the initial stage. Subsequently, it employs a more realistic physically-based inverse rendering model in the second stage, utilizing multi-bounce path tracing and Monte Carlo integration. By leveraging multi-bounce path tracing, our method not only effectively estimates indirect illumination--including self-shadowing and internal reflections--but also enhances the intrinsic decomposition of shape, material, and lighting. Moreover, we incorporate reservoir sampling into our framework to address the noise in Monte Carlo integration, enhancing convergence and facilitating gradient-based optimization with low sample counts. Through both qualitative and quantitative assessments across various scenarios, especially those with complex shadows, we demonstrate that our method achieves state-of-the-art performance in decomposition results. Additionally, our optimized explicit geometry supports further applications in scene editing, relighting, and material editing, compatible with modern graphics engines and CAD software.
         </div>
+
+        <div class="container is-max-desktop has-text-centered">
+          
+          <h2 class="title">Quantitative comparison</h2>
+          <div align="center">
+            <img src="files/images/PSNR.png" alt="Image" style="width: 100%;"/>
+            <font size="3" color="gray">
+              Note that in terms of novel view synthesis, our method demonstrates similar performance compared to TensoIR and GS-IR. This is because these baselines tend to overfit the training dataset and bake the complex lighting effects (eg. shadows) within the materials, as qualitatively analyzed above. Despite this, we can produce considerably better material estimation and relighting results.
+              <!-- <br />
+              * The G.T. roughness is N/A. because not all synthetic data are rendered with Disney BSDF. -->
+            </font>
+          </div>
+
+        </div>
+
         <div class="container is-max-desktop has-text-centered">
           <h2 class="title">Albedo results and relighting results</h2>
           <div class="hero-body">
@@ -185,11 +200,26 @@
               </div>
             </div>
           </div>
+          <div align="center">
+            <font size="3" color="gray">
+              Drag the slider to compare!
+              <!-- <br />
+              * The G.T. roughness is N/A. because not all synthetic data are rendered with Disney BSDF. -->
+            </font>
+          </div>
 
           <div class="container is-max-desktop has-text-centered">
+            <h2 class="title">Albedo results</h2>
+            <div align="center">
+              <img src="files/images/abl/albedo_com.png" alt="Image" style="width: 90%;"/>
+            </div>
             <h2 class="title">Normal results</h2>
             <div align="center">
-              <img src="files/images/abl/normal_lego.png" alt="Image" style="width: 70%;"/>
+              <img src="files/images/abl/normal_lego.png" alt="Image" style="width: 80%;"/>
+            </div>
+            <h2 class="title">visibility results</h2>
+            <div align="center">
+              <img src="files/images/abl/vis.png" alt="Image" style="width: 70%;"/>
             </div>
           </div>
         </div>
@@ -259,20 +289,6 @@
         </div>
         <br>
         <br>
-        <div class="container is-max-desktop has-text-centered">
-          <h2 class="title">Albedo comparison</h2>
-          <div align="center">
-            <img src="files/images/abl/albedo.png" alt="Image" style="width: 90%;"/>
-          </div>
-        </div>
-        <br>
-        <br>
-        <div class="container is-max-desktop has-text-centered">
-          <h2 class="title">Normal comparison</h2>
-          <div align="center">
-            <img src="files/images/abl/normal.png" alt="Image" style="width: 90%;"/>
-          </div>
-        </div>
 
       </div>
     </div>
