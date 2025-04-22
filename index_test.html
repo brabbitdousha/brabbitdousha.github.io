@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+
+    h2.noselect {
+      user-select: none;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .experience-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .publication {
+      display: flex;
+      width: calc(50% - 10px);
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-sizing: border-box;
+    }
+
+    .press {
+      width: 80px;
+      height: 80px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+
+    .row-text {
+      flex: 1;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    li {
+      margin-top: 5px;
+    }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .publication {
+        width: 100%;
+        flex-direction: row;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2 class="noselect">Experience</h2>
+  <div class="experience-container">
+    <div class="publication row clearfix">
+      <div class="press img-contain row-media" style="background-image: url(images/NTU.png);"></div>
+      <div class="row-text">
+        <span class="bold">Research Assistant</span><br/>
+        <span>Nanyang Technological University, Singapore</span><br/>
+        <span class="italic">Oct 2023 - Jan 2025</span><br>
+        <li>Rendering related research.</li>
+      </div>
+    </div>
+
+    <div class="publication row clearfix">
+      <div class="press img-contain row-media" style="background-image: url(images/cad.jpg);"></div>
+      <div class="row-text">
+        <span class="bold">Research Intern</span><br/>
+        <span>Zhejiang University State Key Laboratory of CAD&amp;CG</span><br/>
+        <span class="italic">Mar 2022 - Now</span><br>
+        <li>Advised by Prof. <a href="http://www.cad.zju.edu.cn/home/huo/">Yuchi Huo</a></li>
+      </div>
+    </div>
+
+    <div class="publication row clearfix">
+      <div class="press img-contain row-media" style="background-image: url(images/tencent.png);"></div>
+      <div class="row-text">
+        <span class="bold">Graphics Engineering Intern</span><br/>
+        <span>Tencent</span><br/>
+        <span class="italic">Nov 2021 - Mar 2022</span><br>
+        <li>Worked on the internal rendering engine of the group, algorithms implementation and architecture development.</li>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
