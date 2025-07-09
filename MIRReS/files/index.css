@@ -263,3 +263,58 @@ body {
   width: 2000%;
   max-width: none !important;
 }
+
+.github-code-block {
+    position: relative;
+    background: #ffffff; /* GitHub 暗色背景 */
+    border-radius: 6px;
+    margin: 16px 0;
+    overflow: hidden;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 14px;
+  }
+
+  /* 代码内容区域 */
+  .github-code-content {
+    padding: 16px;
+    overflow-x: auto;
+    color: #070707; /* GitHub 代码文字颜色 */
+    white-space: pre;
+    tab-size: 4;
+  }
+
+  /* 右上角复制按钮 */
+  .github-copy-btn {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    padding: 4px 8px;
+    background: #3e3c3c;
+    border: 1px solid #6e7681;
+    border-radius: 4px;
+    color: #c9d1d9;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .github-code-block:hover .github-copy-btn {
+    opacity: 1;
+  }
+
+  .github-copy-btn:hover {
+    background: #4e5966;
+    color: white;
+    border-color: #58a6ff;
+  }
+
+  /* 语言标签（可选） */
+  .github-lang-tag {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    color: #8b949e;
+    font-size: 12px;
+    user-select: none;
+  }
